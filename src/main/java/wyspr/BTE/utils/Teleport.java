@@ -101,7 +101,7 @@ public class Teleport {
 		}
 		((PlayerServer) movingPlayer).teleport(x, y, z, yr, xr);
 		movingPlayer.moveTo(x, y, z, yr, xr);
-		movingPlayer.world.playSoundAtEntity(null, movingPlayer, "random.explode", 2, 2);
+		movingPlayer.world.playSoundAtEntity(null, movingPlayer, Essentials.TeleportSound, 2, 2);
 		movingPlayer.world.spawnParticle("smoke", x + 0.5, y, z + 0.5, 0, 0, 0, 0);
 		// Show the teleported player to the accepting player instantly
 		// instead of waiting on the server to send the packet
